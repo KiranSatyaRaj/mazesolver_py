@@ -9,7 +9,7 @@ class Window:
         self.new_Canvas = Canvas(self.__root, width=self.width, height=self.height, bg='white')
         self.new_Canvas.pack(fill=BOTH, expand=1)
         self.running = False
-        self.__root.protocol("WM_DELTE_WINDOW", self.close)
+        self.__root.protocol("WM_DELETE_WINDOW", self.close)
 
     def redraw(self):
         self.__root.update_idletasks()
@@ -19,6 +19,7 @@ class Window:
         self.running = True
         while self.running:
             self.redraw()
+        print("window closed...")
         
     def draw_line(self, line, fill_color):
         line.draw(self.new_Canvas, fill_color)
