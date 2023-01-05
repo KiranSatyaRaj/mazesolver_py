@@ -42,3 +42,15 @@ class Line:
             self.point1.x, self.point1.y, self.point2.x, self.point2.y, fill=fill_color, width=2
         )
         canvas.pack(fill=BOTH, expand=1)
+    
+class Cell:
+    def __init__(self, p1, p2, window):
+        self.has_left_wall = True
+        self.has_right_wall = True
+        self.has_top_wall = True
+        self.has_bottom_wall = True
+        self.__x1 = p1.x
+        self.__x2 = p2.x
+        self.__y1 = p1.y
+        self.__y2 = p1.y
+        self.__win = window
