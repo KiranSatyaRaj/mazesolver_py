@@ -44,13 +44,26 @@ class Line:
         canvas.pack(fill=BOTH, expand=1)
     
 class Cell:
-    def __init__(self, p1, p2, window):
+    def __init__(self):
         self.has_left_wall = True
         self.has_right_wall = True
         self.has_top_wall = True
         self.has_bottom_wall = True
-        self.__x1 = p1.x
-        self.__x2 = p2.x
-        self.__y1 = p1.y
-        self.__y2 = p1.y
-        self.__win = window
+
+    def draw(self, p1, p2, canvas):
+        if self.has_left_wall:
+            canvas.draw_line(
+                line=Line(Point(p1.x, p1.y), Point(p1.x, p2.y)), fill_color='black'
+            )
+        if self.has_top_wall:
+            canvas.draw_line(
+                line=Line(Point(p1.x, p1.y), Point(p2.x, p1.y)), fill_color='black'
+            )
+        if self.has_right_wall:
+            canvas.draw_line(
+                line=Line(Point(p2.x, p1.y), Point(p2.x, p2.y)), fill_color='black'
+            )
+        if self.has_bottom_wall:
+            canvas.draw_line(
+                line=Line(Point(p1.x, p2.y), Point(p2.x, p2.y)), fill_color='black'
+                )
