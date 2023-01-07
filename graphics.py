@@ -42,28 +42,3 @@ class Line:
             self.point1.x, self.point1.y, self.point2.x, self.point2.y, fill=fill_color, width=2
         )
         canvas.pack(fill=BOTH, expand=1)
-    
-class Cell:
-    def __init__(self):
-        self.has_left_wall = True
-        self.has_right_wall = True
-        self.has_top_wall = True
-        self.has_bottom_wall = True
-
-    def draw(self, p1, p2, canvas):
-        if self.has_left_wall:
-            canvas.draw_line(
-                line=Line(Point(p1.x, p1.y), Point(p1.x, p2.y)), fill_color='black'
-            )
-        if self.has_top_wall:
-            canvas.draw_line(
-                line=Line(Point(p1.x, p1.y), Point(p2.x, p1.y)), fill_color='black'
-            )
-        if self.has_right_wall:
-            canvas.draw_line(
-                line=Line(Point(p2.x, p1.y), Point(p2.x, p2.y)), fill_color='black'
-            )
-        if self.has_bottom_wall:
-            canvas.draw_line(
-                line=Line(Point(p1.x, p2.y), Point(p2.x, p2.y)), fill_color='black'
-                )
