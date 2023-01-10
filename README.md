@@ -1,5 +1,6 @@
 # mazesolver_py
 
+- This project is in progress.
 
 <pre>
  _ __ ___   __ _ _______   ___  ___ | |_   _____ _ __ 
