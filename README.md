@@ -6,7 +6,7 @@
 - Change into project directory and run the main file `cd mazesolver_py && python main.py`
 - If you are on windows, I recommend installing WSL(windows sub-system for linux), you can skip this if you already have git-bash installed.
 
-<pre>
+<pre>    
  _ __ ___   __ _ _______   ___  ___ | |_   _____ _ __ 
 | '_ ` _ \ / _` |_  / _ \ / __|/ _ \| \ \ / / _ \ '__|
 | | | | | | (_| |/ /  __/ \__ \ (_) | |\ V /  __/ |   

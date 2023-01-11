@@ -6,10 +6,10 @@ def main():
 
     win = Window(800, 600)
 
-    num_rows = 10
-    num_cols = 10
-    cell_size_x = 80
-    cell_size_y = 60
+    num_rows = 20
+    num_cols = 20
+    cell_size_x = 40
+    cell_size_y = 30
 
     m = Maze(num_rows=num_rows, num_cols=num_cols, cell_size_x=cell_size_x, cell_size_y=cell_size_y, win=win)
     m.create_cells()

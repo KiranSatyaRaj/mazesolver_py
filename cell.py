@@ -1,7 +1,7 @@
 from graphics import *
 
 class Cell:
-    def __init__(self, window, p1, p2):
+    def __init__(self, p1, p2, win=None):
         self.has_left_wall = True
         self.has_right_wall = True
         self.has_top_wall = True
@@ -10,7 +10,7 @@ class Cell:
         self.__y1 = p1.y
         self.__x2 = p2.x
         self.__y2 = p2.y
-        self.__win = window
+        self.__win = win
     
     def x1(self):
         return self.__x1
@@ -26,6 +26,8 @@ class Cell:
 
 
     def draw(self):
+        if self.__win is None:
+            return
         p1 = Point(self.x1(), self.y1())
         p2 = Point(self.x2(), self.y2())
         if self.has_left_wall:
