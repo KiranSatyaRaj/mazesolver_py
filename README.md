@@ -1,7 +1,7 @@
 # mazesolver_py
 
 - This project is in progress.
-- But you can try running the project in your local system(assuming that it's a Linux system)
+- But you can try running the project in your local system(assuming that it's a Linux system or WSL)
 - fork the project
 - Open your terminal(ctrl + alt + t) and execute 
 ```bash
