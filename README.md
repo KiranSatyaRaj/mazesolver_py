@@ -2,10 +2,13 @@
 
 - This project is in progress.
 - But you can try running the project in your local system(assuming that it's a Linux system)
-- Open terminal(ctrl + alt + t) and execute 
+- fork the project
+- Open your terminal(ctrl + alt + t) and execute 
 ```bash
-cd && git clone https://github.com/KiranSatyaRaj/mazesolver_py.git
+cd && git clone https://github.com/YOUR_USERNAME/mazesolver_py.git
 ```
+- [Install the neccessary dependencies to run the program](https://gist.github.com/KiranSatyaRaj/1b99f51c3c5833132a14a923c945d3a5)
+
 - Change into project directory and run the main file 
 ```bash
 cd mazesolver_py && python main.py
