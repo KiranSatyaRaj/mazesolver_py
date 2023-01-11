@@ -27,8 +27,8 @@ class Maze:
             self.cells.append(self.cells_row)
                 
     def __draw_cell(self, i, j):
-        point1 = Point(j * self.__cell_size_x, i * self.__cell_size_y)
-        point2 = Point(self.__cell_size_x * (j + 1), (i + 1) * self.__cell_size_y)
+        point1 = Point(self.__cell_size_x * (j + 1), (i + 1) * self.__cell_size_y)
+        point2 = Point(self.__cell_size_x * (j + 2), (i + 2) * self.__cell_size_y)
 
         c = Cell(win=self.__win, p1=point1, p2=point2)
         c.draw()
