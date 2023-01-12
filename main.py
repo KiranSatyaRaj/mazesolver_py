@@ -4,10 +4,10 @@ from maze import *
 
 def main():
 
-    win = Window(800, 600)
+    win = Window(1000, 800)
 
-    num_rows = 10
-    num_cols = 14
+    num_rows = 14
+    num_cols = 18
     cell_size_x = 50
     cell_size_y = 50
 
