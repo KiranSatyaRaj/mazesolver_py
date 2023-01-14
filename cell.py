@@ -1,15 +1,11 @@
 from graphics import *
 
 class Cell:
-    def __init__(self, p1, p2, win=None):
+    def __init__(self, win=None):
         self.has_left_wall = True
         self.has_right_wall = True
         self.has_top_wall = True
         self.has_bottom_wall = True
-        self.__x1 = p1.x
-        self.__y1 = p1.y
-        self.__x2 = p2.x
-        self.__y2 = p2.y
         self.__win = win
     
     def x1(self):
@@ -25,26 +21,31 @@ class Cell:
         return self.__y2
 
 
-    def draw(self):
+    def draw(self, p1, p2, color='black'):
+        self.__x1 = p1.x
+        self.__y1 = p1.y
+        self.__x2 = p2.x
+        self.__y2 = p2.y
+
         if self.__win is None:
             return
         p1 = Point(self.x1(), self.y1())
         p2 = Point(self.x2(), self.y2())
         if self.has_left_wall:
             self.__win.draw_line(
-                line=Line(Point(p1.x, p1.y), Point(p1.x, p2.y)), fill_color='black'
+                line=Line(Point(p1.x, p1.y), Point(p1.x, p2.y)), fill_color=color
             )
         if self.has_top_wall:
             self.__win.draw_line(
-                line=Line(Point(p1.x, p1.y), Point(p2.x, p1.y)), fill_color='black'
+                line=Line(Point(p1.x, p1.y), Point(p2.x, p1.y)), fill_color=color
             )
         if self.has_right_wall:
             self.__win.draw_line(
-                line=Line(Point(p2.x, p1.y), Point(p2.x, p2.y)), fill_color='black'
+                line=Line(Point(p2.x, p1.y), Point(p2.x, p2.y)), fill_color=color
             )
         if self.has_bottom_wall:
             self.__win.draw_line(
-                line=Line(Point(p1.x, p2.y), Point(p2.x, p2.y)), fill_color='black'
+                line=Line(Point(p1.x, p2.y), Point(p2.x, p2.y)), fill_color=color
                 )
 
     def draw_move(self, to_cell, undo=False):
