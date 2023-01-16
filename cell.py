@@ -7,7 +7,7 @@ class Cell:
         self.has_top_wall = True
         self.has_bottom_wall = True
         self.__win = win
-    
+
     def x1(self):
         return self.__x1
 
@@ -21,32 +21,41 @@ class Cell:
         return self.__y2
 
 
-    def draw(self, p1, p2, color='black'):
-        self.__x1 = p1.x
-        self.__y1 = p1.y
-        self.__x2 = p2.x
-        self.__y2 = p2.y
-
+    def draw(self, x1, y1, x2, y2):
+        self.__x1 = x1
+        self.__y1 = y1
+        self.__x2 = x2
+        self.__y2 = y2
         if self.__win is None:
             return
-        p1 = Point(self.x1(), self.y1())
-        p2 = Point(self.x2(), self.y2())
+
         if self.has_left_wall:
             self.__win.draw_line(
-                line=Line(Point(p1.x, p1.y), Point(p1.x, p2.y)), fill_color=color
+                line=Line(Point(x1, y1), Point(x1, y2)), fill_color='black'
             )
+
         if self.has_top_wall:
             self.__win.draw_line(
-                line=Line(Point(p1.x, p1.y), Point(p2.x, p1.y)), fill_color=color
+                line=Line(Point(x1, y1), Point(x2, y1)), fill_color='black'
             )
+        else:
+            self.__win.draw_line(
+                line=Line(Point(x1, y1), Point(x2, y1)), fill_color='white'
+            )
+
         if self.has_right_wall:
             self.__win.draw_line(
-                line=Line(Point(p2.x, p1.y), Point(p2.x, p2.y)), fill_color=color
+                line=Line(Point(x2, y1), Point(x2, y2)), fill_color='black'
             )
+       
         if self.has_bottom_wall:
             self.__win.draw_line(
-                line=Line(Point(p1.x, p2.y), Point(p2.x, p2.y)), fill_color=color
+                line=Line(Point(x1, y2), Point(x2, y2)), fill_color='black'
                 )
+        else:
+            self.__win.draw_line(
+                line=Line(Point(x1, y2), Point(x2, y2)), fill_color='white'
+            )
 
     def draw_move(self, to_cell, undo=False):
         x1 = (self.x1() + self.x2()) // 2
