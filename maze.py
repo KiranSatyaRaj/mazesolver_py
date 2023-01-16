@@ -2,6 +2,7 @@ from graphics import *
 from cell import *
 import time
 
+
 class Maze:
     def __init__(
         self,
@@ -28,7 +29,7 @@ class Maze:
         for i in range(0, self.__num_rows):
             for j in range(0, self.__num_cols):
                 self.__draw_cell(i, j)
-                
+
     def __draw_cell(self, i, j):
         x1 = self.__cell_size_x * (j + 1)
         y1 = (i + 1) * self.__cell_size_y
@@ -36,7 +37,7 @@ class Maze:
         y2 = (i + 2) * self.__cell_size_y
         self._cells[i][j].draw(x1, y1, x2, y2)
         self.__animate()
-                
+
     def __animate(self):
         if self.__win is None:
             return
@@ -46,5 +47,5 @@ class Maze:
     def _break_entrance_and_exit(self):
         self._cells[0][0].has_top_wall = False
         self.__draw_cell(0, 0)
-        self._cells[self.__num_rows-1][self.__num_cols-1].has_bottom_wall = False
+        self._cells[self.__num_rows - 1][self.__num_cols - 1].has_bottom_wall = False
         self.__draw_cell(self.__num_rows - 1, self.__num_cols - 1)

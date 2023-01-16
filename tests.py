@@ -1,6 +1,7 @@
 import unittest
 from maze import Maze
 
+
 class Tests(unittest.TestCase):
     def test_maze_create_cells(self):
         num_cols = 12
@@ -27,9 +28,10 @@ class Tests(unittest.TestCase):
             False,
         )
         self.assertEqual(
-            m1._cells[num_rows-1][num_cols-1].has_bottom_wall, 
+            m1._cells[num_rows - 1][num_cols - 1].has_bottom_wall,
             False,
         )
+
 
 if __name__ == "__main__":
     unittest.main()
