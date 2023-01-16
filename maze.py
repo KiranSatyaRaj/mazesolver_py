@@ -35,13 +35,13 @@ class Maze:
         y1 = (i + 1) * self.__cell_size_y
         x2 = self.__cell_size_x * (j + 2)
         y2 = (i + 2) * self.__cell_size_y
-        self._cells[i][j].draw(x1, y1, x2, y2)
+        self._cells[i][j]._draw(x1, y1, x2, y2)
         self.__animate()
 
     def __animate(self):
         if self.__win is None:
             return
-        self.__win.redraw()
+        self.__win._redraw()
         time.sleep(0.01)
 
     def _break_entrance_and_exit(self):

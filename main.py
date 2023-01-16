@@ -22,7 +22,7 @@ def main():
     m._create_cells()
     m._break_entrance_and_exit()
 
-    win.wait_for_close()
+    win._wait_for_close()
 
 
 main()
