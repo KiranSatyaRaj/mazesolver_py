@@ -19,7 +19,7 @@ class Window:
         self.__running = True
         while self.__running:
             self._redraw()
-        print("window _closed...")
+        print("window closed...")
 
     def _draw_line(self, line, fill_color):
         line.draw(self._new_Canvas, fill_color)
@@ -37,9 +37,9 @@ class Point:
 
 class Line:
 
-    def __init__(self, _point1, _point2):
-        self._point1 = _point1
-        self._point2 = _point2
+    def __init__(self, point1, point2):
+        self._point1 = point1
+        self._point2 = point2
 
     def draw(self, canvas, fill_color):
         canvas.create_line(
