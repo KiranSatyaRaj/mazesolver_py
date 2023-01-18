@@ -14,6 +14,12 @@ cd && git clone https://github.com/YOUR_USERNAME/mazesolver_py.git
 ```bash
 cd mazesolver_py && python main.py
 ```
+- This should be the output
+
+
+https://user-images.githubusercontent.com/90622705/213117941-e40dbb88-8167-4b19-ae33-6f62856d14d0.mp4
+
+
 - If you are on windows, I recommend installing WSL(windows sub-system for linux), you can skip this if you already have git-bash installed.
 
 <pre>    
