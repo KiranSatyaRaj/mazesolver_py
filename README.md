@@ -1,8 +1,10 @@
 # mazesolver_py
 
-- This project is in progress.
+- Thanks for stopping by
+- This project is in progress
+- There'll be less to no activity for a couple of weeks, because it requires depth-first-search to add the new functionality, so I'm focusing on learning that part before I get back to building the mazesolver
 - The objective of this project is to create a maze in a blank canvas and solve it, It uses the [tkinter](https://docs.python.org/3/library/tkinter.html) module to import the canvas and widget functionality.
-- But you can try running the project in your local system(assuming that it's a Linux system or WSL)
+- You can try running the project in your local system(assuming that it's a Linux system or WSL)
 - fork the project
 - Open your terminal(ctrl + alt + t) and execute 
 ```bash
