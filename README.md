@@ -5,10 +5,10 @@
 - There'll be less to no activity for a couple of weeks, because it requires depth-first-search to add the new functionality, so I'm focusing on learning that part before I get back to building the mazesolver
 - The objective of this project is to create a maze in a blank canvas and solve it, It uses the [tkinter](https://docs.python.org/3/library/tkinter.html) module to import the canvas and widget functionality.
 - You can try running the project in your local system(assuming that it's a Linux system or WSL)
-- fork the project
+- fork the project and clone it in your workspace
 - Open your terminal(ctrl + alt + t) and execute 
 ```bash
-cd && git clone https://github.com/YOUR_USERNAME/mazesolver_py.git
+git clone https://github.com/YOUR_USERNAME/mazesolver_py.git
 ```
 - [Install the neccessary dependencies to run the program](https://gist.github.com/KiranSatyaRaj/1b99f51c3c5833132a14a923c945d3a5)
 
