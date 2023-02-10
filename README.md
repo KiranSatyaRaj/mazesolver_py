@@ -14,7 +14,7 @@ git clone https://github.com/YOUR_USERNAME/mazesolver_py.git
 
 - Change into project directory and run the main file 
 ```bash
-cd mazesolver_py && python main.py
+cd mazesolver_py/mazesolver && python main.py
 ```
 - This should be the output
 
